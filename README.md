@@ -90,8 +90,8 @@ Repo:
 ```groovy
 repositories {
     maven {
-        name "papermc"
-        url "https://papermc.io/repo/repository/maven-public/"
+        name "imanityLibraries"
+        url "https://maven.imanity.dev/repository/imanity-libraries/"
     }
 }
 ```
@@ -99,7 +99,7 @@ repositories {
 Dependency:
 ```groovy
 dependencies {
-    implementation "io.papermc:paperlib:1.0.6"
+    implementation "io.papermc.paperlib:imanity:1.0.7-SNAPSHOT"
 }
 ```
 
@@ -119,8 +119,8 @@ Repo:
 ```xml
 <repositories>
     <repository>
-        <id>papermc</id>
-        <url>https://papermc.io/repo/repository/maven-public/</url>
+        <id>imanityLibraries</id>
+        <url>https://maven.imanity.dev/repository/imanity-libraries/</url>
     </repository>
 </repositories>
 ```
@@ -128,9 +128,9 @@ Dependency:
 ```xml
 <dependencies>
     <dependency>
-        <groupId>io.papermc</groupId>
-        <artifactId>paperlib</artifactId>
-        <version>1.0.6</version>
+        <groupId>io.papermc.paperlib</groupId>
+        <artifactId>imanity</artifactId>
+        <version>1.0.7-SNAPSHOT</version>
         <scope>compile</scope>
      </dependency>
  </dependencies>

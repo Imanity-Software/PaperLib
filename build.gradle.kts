@@ -70,13 +70,13 @@ publishing {
             pom {
                 name.set("PaperLib")
                 description.set("Plugin library for interfacing with Paper specific APIs with graceful fallback that maintains Spigot compatibility.")
-                url.set("https://github.com/PaperMC/PaperLib")
+                url.set("https://github.com/Imanity-Software/PaperLib")
                 scm {
-                    url.set("https://github.com/PaperMC/PaperLib")
+                    url.set("https://github.com/Imanity-Software/PaperLib")
                 }
                 issueManagement {
                     system.set("github")
-                    url.set("https://github.com/PaperMC/PaperLib/issues")
+                    url.set("https://github.com/Imanity-Software/PaperLib/issues")
                 }
                 licenses {
                     license {
@@ -88,23 +88,23 @@ publishing {
         }
     }
 
-    if (project.hasProperty("papermcRepoUser") && project.hasProperty("papermcRepoPass")) {
-        val papermcRepoUser: String by project
-        val papermcRepoPass: String by project
+    if (project.hasProperty("imanityLibrariesUsername") && project.hasProperty("imanityLibrariesPassword")) {
+        val imanityLibrariesUsername: String by project
+        val imanityLibrariesPassword: String by project
 
         val repoUrl = if (version.toString().endsWith("-SNAPSHOT")) {
-            "https://papermc.io/repo/repository/maven-snapshots/"
+            "https://maven.imanity.dev/repository/imanity-libraries/"
         } else {
-            "https://papermc.io/repo/repository/maven-releases/"
+            "https://maven.imanity.dev/repository/imanity-libraries/"
         }
 
         repositories {
             maven {
                 url = uri(repoUrl)
-                name = "Paper"
+                name = "Imanity Libraries"
                 credentials {
-                    username = papermcRepoUser
-                    password = papermcRepoPass
+                    username = imanityLibrariesUsername
+                    password = imanityLibrariesPassword
                 }
             }
         }
