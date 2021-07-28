@@ -3,6 +3,8 @@ plugins {
 }
 
 repositories {
+    mavenCentral()
+    maven("https://oss.sonatype.org/content/groups/public/")
     maven("https://maven.imanity.dev/repository/imanity-libraries/")
 }
 
