@@ -1,3 +1,6 @@
+## Fork
+This is a fork of original PaperLib that supports ImanitySpigot3
+
 # PaperLib
 PaperLib is a plugin library for interfacing with Paper specific APIs (such as async chunk loading), with graceful fallbacks maintaining compatibility with both the Bukkit and Spigot API's.
 

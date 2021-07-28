@@ -34,6 +34,13 @@ public class PaperLib {
 
     private static Environment initialize() {
         try {
+            Class.forName("org.imanity.imanityspigot.config.ImanitySpigotConfig");
+            return (Environment) Class.forName("io.papermc.lib.environments.ImanityEnvironment").getDeclaredConstructor().newInstance();
+        } catch (ClassNotFoundException ignored) {
+        } catch (Exception ex) {
+            throw new RuntimeException(ex);
+        }
+        try {
             Class.forName("com.destroystokyo.paper.PaperConfig");
             return new PaperEnvironment();
         } catch (ClassNotFoundException e) {
@@ -258,10 +265,18 @@ public class PaperLib {
 
     /**
      * Check if the server has access to the Paper API
-     * @return True for Paper environments
+     * @return True for Paper <em>and</em> Imanity environments
      */
     public static boolean isPaper() {
         return ENVIRONMENT.isPaper();
+    }
+
+    /**
+     * Check if the server has access to Imanity API
+     * @return True for Imanity environments
+     */
+    public static boolean isImanity() {
+        return ENVIRONMENT.isImanity();
     }
 
     /**
